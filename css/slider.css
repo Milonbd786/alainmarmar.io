@@ -1,19 +1,24 @@
-@charset "utf-8";
-/* CSS Document */
+
+/*------------------------ Slider ----------------------*/
+.working-sample{
+	width: 100%;
+	float: left;
+}
 
 .slider-background{
-	width: 90%;
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	flex-direction: column;
-  	position: relative;
-	background: linear-gradient(-10deg, #703804 20%, #AC7600 20.3%);
-	padding: 60px 5% 50px 5%;
-	margin-top: -5%;
+	float: left;
+	width: 100%;
+	margin-top: -3px;
+	z-index: 0;
 }
+
 .slider-wrapper {
+	width: 74%;
+	margin-left: 13%;
   	overflow: hidden;
+	margin-top: -13vw;
+	float: left;
+	border-radius: 5px; 
 }
 
 .inner-wrapper {
@@ -33,10 +38,73 @@
   float: left;
 }
 
+/*------------------------ Animation Gallery ----------------------*/
+
+
+.animation-gallery{
+    width: 80%;
+	margin: -200px 5% 20px 5%;
+	padding: 2% 2%;
+	background: #704D02;
+	float: left;
+	border: #FFFFFF 20px solid;
+}	
+
+.overly {
+    height: 100%;
+    width: 100%;
+	left: -100%;
+    top: 0;
+	padding-top: 15%;
+	position: absolute;
+	font-size: 20px;
+	text-align: center;
+	color: #FFFFFF;
+	background-image: linear-gradient(150deg, rgba(0,52,68,0.68) 65%, #BF7C00  65.08%);
+	transition: 0.3s;
+}
+
+.work-sample:hover .overly {
+    left: 0%;
+}
+
+.work-sample {
+	width: 31.3%;
+	float: left;
+    position: relative;
+    overflow: hidden;
+	margin: 1%;
+	-webkit-box-shadow: 0 8px 10px -6px #000000;
+	-moz-box-shadow: 0 8px 10px -6px #000000;
+	box-shadow: 0 8px 10px -6px #000000;
+	opacity: 0;
+	transform: translate(0, 200px); 
+  	transition: all 1s;
+}
+
+.work-sample.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
 @media screen and (max-width: 767px) {
-	.slider-background{
-		padding: 40px 5% 50px 5%;
-		margin-top:-200px;
-		z-index: 200;
+	
+.working-sample{ margin-top: -30px;	}	
+	
+.slider-wrapper { width: 86%; margin-left: 7%; margin-top: -15vw; border: #231818 2px solid; }	
+	
+.animation-gallery{ width: 80%;	margin: -70px 5% 20px 5%; padding: 2% 2%; border: #FFFFFF 10px solid; }	
 	}
+
+/*-------------------------- Only Gallery-------------------------------*/
+
+@media screen and (max-width: 480px) {
+.animation-gallery{	margin: -140px 5% 20px 5%;}
+	.work-sample { width: 94%; margin: 3%;}	
+}
+
+@media (min-width:480px) and (max-width:767px){
+.animation-gallery{	margin: -140px 5% 20px 5%;}
+.work-sample { width: 43.6%; margin: 3%;}	
+
 }
